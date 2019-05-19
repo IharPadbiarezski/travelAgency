@@ -1,4 +1,27 @@
 extends ../layout/index
 
 block content 
-    h1 About Us
+    main.container.mt-5
+        .row
+            .col-md-5
+                img.img-fluid(src="/img/about.jpg", alt="About Image")
+            .col-md-7
+                h1 #{pageTitle}
+                blockquote Donec elit est, consectetur ac urna sit amet, sagittis consectetur erat. Phasellus tincidunt ultrices lorem, vitae sollicitudin risus bibendum a. Donec nec massa aliquam, suscipit erat vitae, feugiat risus. Donec luctus lorem a neque pellentesque, vel efficitur est faucibus. Quisque luctus consequat placerat. Integer condimentum nec eros quis pharetra. Integer sit amet arcu in velit porta elementum.
+                p Quisque sollicitudin libero diam, a auctor tortor fermentum id. Proin hendrerit vestibulum luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc gravida arcu rutrum urna pellentesque ultricies. Nullam tristique at nisl sed vehicula. Duis sodales tempor turpis vestibulum tempus. Vivamus nec bibendum diam. Ut vel lacinia quam. Pellentesque ipsum libero, rhoncus at nulla vitae, elementum gravida enim. Etiam porttitor ex nec venenatis dictum. In ac molestie leo.
+                p Nulla luctus condimentum lacus sit amet ultrices. Ut sit amet faucibus urna, et sollicitudin eros. Aliquam erat volutpat. Vestibulum ligula nunc, vehicula sed blandit a, rhoncus ut lorem.
+    .icons-list
+        .container.mt-5.py-5.text-center
+            .row
+                .col-md-4
+                    img(src="/img/icon_trust.svg", class="img-fluid mb-4")
+                    h2.mb-4 Trust & Safety
+                    p Aenean commodo diam in elementum lacinia. Pellentesque cursus odio at orci scelerisque scelerisque. Vestibulum pretium pharetra erat id pellentesque.
+                .col-md-4
+                    img(src="/img/icon_destiny.svg", class="img-fluid mb-4")
+                    h2.mb-4 Best Destinations
+                    p Aenean commodo diam in elementum lacinia. Pellentesque cursus odio at orci scelerisque scelerisque. Vestibulum pretium pharetra erat id pellentesque.
+                .col-md-4
+                    img(src="/img/icon_price.svg", class="img-fluid mb-4")
+                    h2.mb-4 Best Price
+                    p Aenean commodo diam in elementum lacinia. Pellentesque cursus odio at orci scelerisque scelerisque. Vestibulum pretium pharetra erat id pellentesque.
