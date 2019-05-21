@@ -18,12 +18,18 @@ module.exports = function() {
 			pageTitle: 'About Us'
 		});
 	});
-	// about us
 	router.get('/travels', (req, res) => {
 		Travels.findAll().then((travels) =>
 			res.render('travels', {
 				pageTitle: 'Upcoming Travels',
 				travels
+			})
+		);
+	});
+	router.get('/travels/:id', (req, res) => {
+		Travels.findByPk(req.params.id).then((travel) =>
+			res.render('travel', {
+				travel
 			})
 		);
 	});
