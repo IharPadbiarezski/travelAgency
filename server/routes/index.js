@@ -38,6 +38,38 @@ module.exports = function() {
 			pageTitle: 'Testimonials'
 		});
 	});
+	// handles form submission with POST
+	router.post('/testimonials', (req, res) => {
+		let { name, email, message } = req.body;
 
+		// validate the form
+		let errors = [];
+
+		if (!name) {
+			errors.push({ message: 'Add Your Name' });
+		}
+		if (!email) {
+			errors.push({ message: 'Add Your Email' });
+		}
+		if (!message) {
+			errors.push({ message: 'Add Your Testimonial' });
+		}
+
+		console.log(errors);
+
+		// check if there're some errors
+		if (errors.length > 0) {
+			// we have some errors, display the warning to the view
+			res.render('testimonials', {
+				pageTitle: 'Testimonials',
+				errors,
+				name,
+				email,
+				message
+			});
+		} else {
+			// save to the database
+		}
+	});
 	return router;
 };
