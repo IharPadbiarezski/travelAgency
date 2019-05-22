@@ -35,9 +35,12 @@ module.exports = function() {
 		);
 	});
 	router.get('/testimonials', (req, res) => {
-		res.render('testimonials', {
-			pageTitle: 'Testimonials'
-		});
+		Testimonials.findAll().then((testimonials) =>
+			res.render('testimonials', {
+				pageTitle: 'Testimonials',
+				testimonials
+			})
+		);
 	});
 	// handles form submission with POST
 	router.post('/testimonials', (req, res) => {
