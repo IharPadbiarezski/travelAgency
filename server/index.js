@@ -31,6 +31,9 @@ app.use(express.static('public'));
 app.use((req, res, next) => {
 	const date = new Date();
 	res.locals.currentYear = date.getFullYear();
+	// take the current page
+	res.locals.currentPage = req.path;
+
 	// console.log(res.locals);
 	return next();
 });
